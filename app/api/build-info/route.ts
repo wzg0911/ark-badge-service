@@ -11,8 +11,6 @@ export async function GET() {
     version: '0.1.0',
     runtime: 'edge',
     buildTime: new Date().toISOString(),
-    uptimeSeconds: Math.floor(process.uptime?.() ?? 0),
-    nodeVersion: process.version,
     region: process.env.VERCEL_REGION || 'unknown',
   }, {
     headers: { 'Cache-Control': 'no-store' },
