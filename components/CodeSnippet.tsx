@@ -2,16 +2,18 @@
 
 import { useState } from 'react';
 
+const BASE = 'https://ark-badge-service.vercel.app';
+
 const TABS = [
   {
     name: 'Markdown',
-    code: `[![ARK Trust](https://ark-feilunxitong.vercel.app/api/badge?pkg=arkit)](https://ark-feilunxitong.vercel.app)`,
+    code: `[![ARK Trust](${BASE}/api/badge?pkg=arkit)](${BASE})`,
     desc: '嵌入 README / 文档',
   },
   {
     name: 'HTML',
-    code: `<a href="https://ark-feilunxitong.vercel.app">
-  <img src="https://ark-feilunxitong.vercel.app/api/badge?pkg=arkit&style=plastic" alt="ARK Trust" />
+    code: `<a href="${BASE}">
+  <img src="${BASE}/api/badge?pkg=arkit&style=plastic" alt="ARK Trust" />
 </a>`,
     desc: '嵌入网页 / 落地页',
   },
